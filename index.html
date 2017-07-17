@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ThunderNote</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="description" content="A beautiful chat for ZeroNet." />
+    <meta name="keywords" content="beautiful, social, chat, thunder, wave, thunderwave" />
+    <meta name="author" content="Glightstar">
+    <meta name="robots" content="index, nofollow" />
+    <meta name="revisit-after" content="7 days" />
+    <!-- beautiful, social, chat -->
+
+    <link rel="stylesheet" href="css/all.css" />
+    <!--<link rel="stylesheet" href="css/highlight-styles/default.css" />-->
+    <base href="" target="_top" id="base">
+    <script>
+        base.href = document.location.href.replace("/media", "").replace("index.html", "").replace(/[&?]wrapper=False/, "").replace(/[&?]wrapper_nonce=[A-Za-z0-9]+/, "")
+    </script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container grid-960">
+        <header class="navbar fixed shadow-drop-bottom">
+            <div class="navbar container grid-960">
+                <section class="navbar-section">
+                    <ul class="tab workin-tabber" tabs-target="#main-tabs" style="border-bottom-color: transparent;">
+                        <li class="tab-item active">
+                            <a target-tab="Home" href="javascript:void(0)">Home</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="navbar-center">
+                    <a href="javascript:void(0)" class="mr-10 navbar-brand tracking-in-expand">Thunder <figure class="avatar" data-initial="TN" style="background-color: #1DE9B6;"><img src="/1CWkZv7fQAKxTVjZVrLZ8VHcrN6YGGcdky/favicon.ico" class="hide"></figure> Note</a>
+                </section>
+                <section class="navbar-section">
+                    <div class="dropdown dropdown-right">
+                        <button class="btn btn-primary btn-action btn-lg btn-link dropdown-toggle" tabindex="0">
+                            <i class="icon icon-menu"></i>
+                        </button>
+                        <ul class="menu workin-tabber" tabs-target="#main-tabs">
+                            <li class="menu-item">
+                                <div class="tile tile-centered">
+                                    <div class="tile-icon" id="current_user_avatar">
+                                        <figure class="avatar" data-initial="TW"></figure>
+                                    </div>
+                                    <div class="tile-content" id="current_user_name">
+                                        Please login first
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item hideifnotloggedin hide">
+                                <a target-tab="Settings" href="javascript:void(0)">Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="menu-item">
+                                <a target-tab="About" href="javascript:void(0)">About</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="menu-item">
+                                <a href="#Select+user" id="select_user" onclick='return page.selectUser()'>
+                                    Select user
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </header>
+
+        <div id="main-tabs" curtab="Home">
+            <div tab="Home" class="panel">
+                <div class="panel-body" style="overflow-x: hidden;">
+                    <div class="container grid-960 pt-5 pb-5">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <input class="form-input" type="text" id="note_title" placeholder="Title" />
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <textarea class="form-input input-lg" id="notearea" placeholder="Note here" rows="1" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 40px;"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div tab="Settings" class="panel">
+                <div class="panel-body" style="overflow-x: hidden;">
+                    <div id="sttngs_container"></div>
+                </div>
+            </div>
+            <div tab="About" class="panel">
+                <div class="panel-nav">
+                    <ul class="tab workin-tabber" tabs-target="#about-tabs">
+                        <li class="tab-item active">
+                            <a target-tab="page-1" href="javascript:void(0)">About the Project</a>
+                        </li>
+                        <li class="tab-item">
+                            <a target-tab="page-2" href="javascript:void(0)">Ideas/Changelog</a>
+                        </li>
+                        <li class="tab-item">
+                            <a target-tab="page-3" href="javascript:void(0)">Site info</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" style="overflow-x: hidden;">
+                    <div id="about-tabs" curtab="page-1">
+                        <div tab="page-1">
+                            <p><b>ThunderNote</b> is being developed with <span class="icons icons-heart active"></span> by <a href="/Me.Mkg20001.bit/?Profile/1oranGeS2xsKZ4jVsu9SVttzgkYXu4k9v/14K7EydgyeP84L1NKaAHBZTPQCev8BbqCy/glightstar@zeroid.bit">glightstar@zeroid.bit</a>.<br>For
+                                style, it uses a <a href="https://github.com/AnthyG/spectre-dark" target="_blank">work-in-progress-modified fork</a> of <a href="https://picturepan2.github.io/spectre/" target="_blank">Spectre.css</a> and some icons from
+                                <a href="/Me.ZeroNetwork.bit/">ZeroMe</a>.<br>Furthermore it makes use of <a href="https://github.com/chjj/marked" target="_blank">Marked</a> (with <a href="https://github.com/isagalaev/highlight.js" target="_blank">highlight.js</a>                                for Code-Syntax),<br> for the Avatars <a href="http://github.com/stewartlord/identicon.js" target="_blank">Identicon.js</a> (which requires <a href="http://www.xarg.org/download/pnglib.js">PNGLib</a>),
+                                <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG4Everybody</a>,<br> <a href="http://momentjs.com/" target="_blank">Moment.js</a> for date_time-parsing, <a href="https://github.com/jackmoore/autosize"
+                                    target="_blank">Autosize</a>, and at last, <a href="https://jquery.com/" target="_blank">jQuery</a>.</p>
+                        </div>
+                        <div tab="page-2">
+                            <p>Link to the <a href="https://github.com/AnthyG/ThunderNote" target="_blank">GitHub-Repository</a></p>
+                            <p>Structure of a list-item:<br><code><i>{state}</i> Idea.. <i>(example) [requirements]</i></code></p>
+                            <ul>
+                                <li>{state}
+                                    <ul>
+                                        <li><span class="icon icon-time"></span> {Workin on it right now!}</li>
+                                        <li><span class="icon icon-time"></span> {Workin on it..}</li>
+                                        <li><span class="icon icon-check"></span> {"Date when finished"}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul>
+                        </div>
+                        <div tab="page-3">
+                            <p id="out">
+                                <span class="icon icons loading"></span>
+                            </p>
+                        </diV>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function workinTabberS(s) {
+            var s = s || '.workin-tabber'
+            $(s).each(function(elX, elY) {
+                var $dis = $(elY)
+                var mtab = $dis.attr('tabs-target')
+
+                var $dis2 = $(mtab)
+
+                var curtab = $dis2.attr('curtab')
+                var $curtab = $dis2.find('[tab="' + curtab + '"]')
+
+                $dis2.children().not($curtab).hide()
+
+                var $tt = $dis.find('[target-tab]')
+                $tt.off('click')
+                $tt.on('click', function() {
+                    changeWorkinTabber(mtab, $(this).attr("target-tab"))
+                })
+            })
+        }
+
+        function changeWorkinTabber(mtab, ntab) {
+            var $dis = $('.workin-tabber[tabs-target="' + mtab + '"]')
+            var $dis2 = $(mtab)
+
+            var $dis3 = $dis.find('[target-tab="' + ntab + '"]')
+            var curtab = $dis2.attr('curtab')
+            var $curtab = $dis2.find('[tab="' + curtab + '"]')
+
+            var ncurtab = ntab
+            var $ncurtab = $dis2.find('[tab="' + ncurtab + '"]')
+
+            $dis.find('[target-tab="' + curtab + '"]').parent().removeClass("active")
+            $dis3.parent().addClass("active")
+
+            $curtab.hide()
+            $ncurtab.show()
+
+            $dis2.attr('curtab', ncurtab)
+        }
+    </script>
+
+    <script type="text/javascript" src="js/all.js"></script>
+
+    <script>
+        (function() {
+            $("body").addClass("loaded")
+
+            workinTabberS()
+
+            autosize($('#notearea'))
+            var oldresizeH = 0
+            $('#notearea').on('autosize:resized', function() {
+                var h = ($('#notearea').height() - 20)
+
+                console.log(h, oldresizeH)
+
+                if (oldresizeH > h)
+                    h = -h
+
+                oldresizeH = h
+            })
+
+            $('#notearea').on('change', function() {
+                console.log("text changed")
+                autosize.update($(this))
+            })
+
+
+
+            page.cmd("wrapperNotification", [
+                "info",
+                "<b>As a warning</b>, <i>this Zite is still in Beta</i>, so to receive the<br>" +
+                " newest updates you may want to <i>'Disable cache'</i><br> in your <i>'Developers console',<br>" +
+                " and sometimes reset the options to default via the \"Settings\"-Tab.</i>!",
+                7500
+            ])
+
+
+
+            //
+        })()
+    </script>
+
+</body>
+
+</html>
